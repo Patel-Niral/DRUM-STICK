@@ -6,7 +6,9 @@ let numofdrum = document.querySelectorAll(".drum").length;
 function handleclick() {
     let buttonInnerHTML = this.innerHTML;
     makeSound(buttonInnerHTML);
-    document.addEventListener(keypress, makeSound(key.event))
+    document.addEventListener(keypress, function(){
+        makeSound(key.event);
+    })
 
 
     function makeSound(key) {
