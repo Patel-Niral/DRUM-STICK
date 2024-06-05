@@ -1,14 +1,14 @@
 let numofdrum = document.querySelectorAll(".drum").length;
 
 
-
+document.addEventListener("keypress", function(){
+    makeSound(event.key);
+})
 // mouse click handling
 function handleclick() {
     let buttonInnerHTML = this.innerHTML;
     makeSound(buttonInnerHTML);
-    document.addEventListener(keypress, function(){
-        makeSound(key.event);
-    })
+}   
 
 
     function makeSound(key) {
@@ -44,7 +44,7 @@ function handleclick() {
             default: console.log(key);
         }
     }
-}
+
 
 
 
